@@ -1,8 +1,8 @@
-package day01;
+package 구현.스택;
 
 import java.util.Scanner;
 
-public class b10828 {
+public class 스택_10828 {
 	public static void main(String[] args) {
 		int[] numArray = new int[0];
 		Scanner sc = new Scanner(System.in);
