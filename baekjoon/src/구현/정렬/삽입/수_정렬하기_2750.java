@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class 수_정렬하기_2750 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int size = sc.nextInt();
+		int size;
+		size = sc.nextInt();
 		int[] arr = new int[size];
 		
 		for(int i=0;i<size; i++) {
@@ -20,11 +21,15 @@ public class 수_정렬하기_2750 {
 					idx = j;
 					break;
 				}
+				else {
+					idx++;
+				}
 			}
-			int[] sortingArr = Arrays.copyOfRange(arr, idx,i-1);
+			int[] sortingArr = Arrays.copyOfRange(arr, idx,i);
 			arr[idx] = arr[i];
+			
 			for(int j=0;j<sortingArr.length;j++) {
-				arr[idx+1] = sortingArr[j];
+				arr[idx+1+j] = sortingArr[j];
 			}
 		}
 		for(int i=0; i<size; i++) {
