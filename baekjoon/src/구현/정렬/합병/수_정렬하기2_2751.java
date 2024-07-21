@@ -36,10 +36,10 @@ public class 수_정렬하기2_2751 {
 			arr[i] = sc.nextInt();
 		}
 		
-		getsortedArr(arr, size);
+		arr = getsortedArr(arr, size);
 		
-		for(int i=0; i<size; i++) {
-			System.out.println(arr[i]);
+		for(int n:arr) {
+			System.out.println(n);
 		}
 	}
 
