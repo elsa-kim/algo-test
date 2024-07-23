@@ -57,7 +57,11 @@ public class 스위치_켜고_끄기_1244 {
 		for(int i=0;i<arr.length; i++) {
 			System.out.print(arr[i]);
 			if(i==arr.length-1) return;
-			System.out.print(" ");
+			if ((i+1)%20==0) {
+				System.out.println();
+			}else {
+				System.out.print(" ");				
+			}
 		}
 	}
 }
