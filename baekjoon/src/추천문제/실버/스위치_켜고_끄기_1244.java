@@ -25,7 +25,7 @@ public class 스위치_켜고_끄기_1244 {
 		for(int i=0; i<sCnt; i++) {
 			if(sarr[i][0] ==1) {
 				for(int j=0; j<arr.length; j++) {
-					if(j+1%sarr[i][1]==0) {
+					if((j+1)%sarr[i][1]==0) {
 						if(arr[j]==1) {
 							arr[j]=0;
 						}else {
@@ -41,7 +41,7 @@ public class 스위치_켜고_끄기_1244 {
 					arr[sarr[i][1]-1]=1;
 				}
 				int j=1;
-				while(arr[sarr[i][1]-1-j]==arr[sarr[i][1]-1+j]) {
+				while(sarr[i][1]-1-j>=0&&sarr[i][1]-1+j<arr.length&&arr[sarr[i][1]-1-j]==arr[sarr[i][1]-1+j]) {
 					if(arr[sarr[i][1]-1-j]==0) {
 						arr[sarr[i][1]-1-j]=1;
 						arr[sarr[i][1]-1+j]=1;
@@ -54,6 +54,10 @@ public class 스위치_켜고_끄기_1244 {
 				
 			}
 		}
-		
+		for(int i=0;i<arr.length; i++) {
+			System.out.print(arr[i]);
+			if(i==arr.length-1) return;
+			System.out.print(" ");
+		}
 	}
 }
