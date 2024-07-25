@@ -11,24 +11,19 @@ public class 색종이_2563 {
 			arr[i][0] = sc.nextInt();
 			arr[i][1] = sc.nextInt();
 		}
-		int sum = cnt*100;
+		int sum = 0;
+		int[][] have = new int[100][100];
 		for(int i=0; i<cnt; i++) {
-			for(int j=i+1; j<cnt; j++) {
-				if(arr[i][0]-arr[j][0]>=0 && arr[i][0]-arr[j][0]<10) {
-					if(arr[i][1]-arr[j][1]>=0 && arr[i][1]-arr[j][1]<10) {
-						sum-=((10-arr[i][1]+arr[j][1])*(10-arr[i][0]+arr[j][0]));
-					}else if(arr[j][1]-arr[i][1]>=0 && arr[j][1]-arr[i][1]<10) {
-						sum-=((10-arr[j][1]+arr[i][1])*(10-arr[i][0]+arr[j][0]));
-					}
-				}else if(arr[j][0]-arr[i][0]>=0 && arr[j][0]-arr[i][0]<10) {
-					if(arr[i][1]-arr[j][1]>=0 && arr[i][1]-arr[j][1]<10) {
-						sum-=((10-arr[i][1]+arr[j][1])*(10-arr[j][0]+arr[i][0]));
-					}else if(arr[j][1]-arr[i][1]>=0 && arr[j][1]-arr[i][1]<10) {
-						sum-=((10-arr[j][1]+arr[i][1])*(10-arr[j][0]+arr[i][0]));
-					}
+			for(int n=0; n<10; n++) {
+				for(int m=0; m<10; m++) {
+					have[arr[i][0]+n][arr[i][1]+m]=1;
 				}
+			}		
+		}
+		for (int i=0; i<100; i++) {
+			for(int j=0; j<100; j++) {
+				if(have[i][j]==1) sum++;
 			}
-			
 		}
 		System.out.println(sum);
 	}
