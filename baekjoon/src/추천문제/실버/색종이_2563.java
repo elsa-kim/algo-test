@@ -13,18 +13,18 @@ public class 색종이_2563 {
 		}
 		int sum = cnt*100;
 		for(int i=0; i<cnt; i++) {
-			for(int j=i; j<cnt; j++) {
+			for(int j=i+1; j<cnt; j++) {
 				if(arr[i][0]-arr[j][0]>=0 && arr[i][0]-arr[j][0]<10) {
 					if(arr[i][1]-arr[j][1]>=0 && arr[i][1]-arr[j][1]<10) {
-						sum-=((arr[i][1]-arr[j][1])*(10-arr[i][0]+arr[j][0]));
+						sum-=((10-arr[i][1]+arr[j][1])*(10-arr[i][0]+arr[j][0]));
 					}else if(arr[j][1]-arr[i][1]>=0 && arr[j][1]-arr[i][1]<10) {
-						sum-=((arr[j][1]-arr[i][1])*(10-arr[i][0]+arr[j][0]));
+						sum-=((10-arr[j][1]+arr[i][1])*(10-arr[i][0]+arr[j][0]));
 					}
 				}else if(arr[j][0]-arr[i][0]>=0 && arr[j][0]-arr[i][0]<10) {
 					if(arr[i][1]-arr[j][1]>=0 && arr[i][1]-arr[j][1]<10) {
-						sum-=((arr[i][1]-arr[j][1])*(10-arr[j][0]+arr[i][0]));
+						sum-=((10-arr[i][1]+arr[j][1])*(10-arr[j][0]+arr[i][0]));
 					}else if(arr[j][1]-arr[i][1]>=0 && arr[j][1]-arr[i][1]<10) {
-						sum-=((arr[j][1]-arr[i][1])*(10-arr[j][0]+arr[i][0]));
+						sum-=((10-arr[j][1]+arr[i][1])*(10-arr[j][0]+arr[i][0]));
 					}
 				}
 			}
