@@ -1,4 +1,4 @@
-package swea.추천문제.D2;
+package swea.추천문제.D2.스도쿠검증_1974;
 
 import java.util.Scanner;
 

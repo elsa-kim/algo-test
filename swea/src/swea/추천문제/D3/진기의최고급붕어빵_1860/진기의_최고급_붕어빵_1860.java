@@ -1,4 +1,4 @@
-package swea.추천문제.D3;
+package swea.추천문제.D3.진기의최고급붕어빵_1860;
 
 import java.util.Scanner;
 
