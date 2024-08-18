@@ -2,7 +2,7 @@
 
 순서가 있는 수열.
 
-```
+```java
 public class 순열 {
 	static int n; // 자연수 1~n까지의 수
 	static int m; // m개 숫자 뽑기
@@ -34,7 +34,7 @@ public class 순열 {
 
 뽑은 수의 조합이 중복 없어야함 => [1, 2, 3]과 [3, 2, 1]은 동일
 
-```
+```java
 public class 조합 {
 	static int n; // 자연수 1~n까지의 수
 	static int m; // m개 숫자 뽑기
@@ -66,7 +66,7 @@ public class 조합 {
 
 수열의 여러가지 경우의 수 구할 때 유용
 
-```
+```java
 public class 부분집합ver {
 	static int N, K, count;
 	static int[] origin;
@@ -101,12 +101,12 @@ public class 부분집합ver {
         // 입력된 가능한 수들을 각각 true/false로 수열에 포함되는지 체크함으로써 부분집합 생성
 
         // 포함
-		arr[cnt] = true;
-		com(cnt + 1, sum + origin[cnt]);
+	arr[cnt] = true;
+	com(cnt + 1, sum + origin[cnt]);
 
         // 불포함
-		arr[cnt] = false;
-		com(cnt + 1, sum);
+	arr[cnt] = false;
+	com(cnt + 1, sum);
 
 	}
 }
